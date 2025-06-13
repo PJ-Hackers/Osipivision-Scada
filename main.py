@@ -15,12 +15,12 @@ import time
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Configuration
-PI_SERVER = "172.16.0.133"
-USERNAME = "Administrator"
-PASSWORD = "OsaiPI$321"
-SYSLOG_HOST = "172.16.0.126"
-SYSLOG_PORT = 5514
-POINTS_URL = f"https://{PI_SERVER}/piwebapi/dataservers/F1DSdkt6A8VuUE6PK_yW6WufqAT1NJUEk/points"
+PI_SERVER = "0.0.0.0" # Put your Pivision server address
+USERNAME = "Osipi" # Put your Pivision server username
+PASSWORD = "SecurePass" # Put your Pivision server password
+SYSLOG_HOST = "172.16.0.1" # Put your syslog listner server address
+SYSLOG_PORT = 5514 # Put your syslog listner server address
+POINTS_URL = f"https://{PI_SERVER}/piwebapi/dataservers/{your key}/points" # Put your Pivision server key 
 auth = HttpNtlmAuth(USERNAME, PASSWORD)
 
 # Globals
