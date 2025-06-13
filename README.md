@@ -150,7 +150,14 @@ Want to contribute? Submit a pull request or open an issue!
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
+This software is licensed for **personal and internal use only** under a custom license.
+
+- ❌ Commercial use, redistribution, sublicensing, and resale are **not allowed**
+- ✅ You may modify and use it privately or within your organization
+- ⚠️ All rights are reserved by the author
+
+For commercial licensing or permission to redistribute, please contact: pjhackers.dev [at] example.com
+
 
 ---
 
