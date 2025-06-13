@@ -141,6 +141,12 @@ Click `Toggle Theme` to switch between **light** and **dark** modes, with smooth
 Want to contribute? Submit a pull request or open an issue!
 
 ---
+## 🖼️ Preview
+
+![image](https://github.com/user-attachments/assets/a581f3e2-e5f1-462e-8c8b-69177b923681)
+
+
+---
 
 ## 📄 License
 
