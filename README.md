@@ -1,144 +1,141 @@
-Got it! Since the original README used triple backticks for both code and markdown, it conflicted visually. Here's the revised `README.md` written **cleanly without syntax conflicts**, so you can copy and paste it directly into your repo:
+---
+
+# 📊 Osipivision-Scada – PI Web API Monitor
+
+A modern Python GUI application to monitor **PI System tags** in real time using the **PI Web API**. Built with `Tkinter`, this SCADA-lite tool provides a sleek interface to track data points, define alert thresholds, and send syslog alerts when thresholds are breached.
 
 ---
 
-### ✅ `README.md`
+## 🚀 Features
 
-# PI Web API Monitor
-
-A GUI tool built using Python's Tkinter for monitoring PI System tags via the PI Web API. The app allows you to configure thresholds for tag values, log alerts, and send syslog messages if values exceed set limits. It includes dark mode support, logging, import/export settings, and real-time updates.
-
----
-
-## 🔧 Features
-
-* Monitor PI System tags in real time
-* Define min/max threshold values per tag
-* Send alerts via syslog (UDP)
-* Blinking red alerts for exceeded values
-* Light/Dark theme toggle with animation
-* Import/Export tag configurations (JSON)
-* Editable tag priority and custom messages
-* Scrollable, sortable tag list with timestamps
+✨ **Real-Time Monitoring**
+🔔 **Custom Alerts with Syslog Integration**
+🌗 **Animated Dark/Light Theme Toggle**
+⚙️ **Per-Tag Min/Max Settings**
+📝 **Export/Import Tag Configurations (JSON)**
+🧠 **Built-in Logging System (viewable in GUI)**
+🧪 **Blinking Alerts for Out-of-Range Values**
 
 ---
 
-## 🛠 Requirements
+## 📦 Installation
 
-* Python 3.9 or newer
-* The following Python packages:
+### 1. Clone the Repository
 
+```bash
+git clone https://github.com/PJ-Hackers/Osipivision-Scada.git
+cd Osipivision-Scada
 ```
+
+### 2. Install Dependencies
+
+```bash
 pip install requests requests_ntlm
 ```
 
+> 🐍 Python 3.9+ is recommended.
+> 🧰 `tkinter` is typically bundled with Python. If not, install it based on your OS.
+
 ---
 
-## ⚙️ Configuration
+## 🛠️ Configuration
 
-Before running the script, update the following variables in the code:
-
-* `PI_SERVER` – your PI Web API server hostname or IP
-* `USERNAME` / `PASSWORD` – PI Web API credentials
-* `SYSLOG_HOST` / `SYSLOG_PORT` – destination for syslog alerts
-* `POINTS_URL` – formatted URL with your PI Web API server’s key
-
-Example:
+Open `main.py` and edit the following variables near the top:
 
 ```python
-PI_SERVER = "192.168.1.10"
+PI_SERVER = "your-pi-server.com"
 USERNAME = "DOMAIN\\Username"
-PASSWORD = "yourpassword"
-SYSLOG_HOST = "192.168.1.99"
-SYSLOG_PORT = 514
+PASSWORD = "YourPassword"
+SYSLOG_HOST = "192.168.1.10"
+SYSLOG_PORT = 5514
 POINTS_URL = f"https://{PI_SERVER}/piwebapi/dataservers/{your_key}/points"
 ```
+
+🔐 **Important:** Never commit sensitive credentials to public repos.
 
 ---
 
 ## ▶️ How to Run
 
-Run the script using:
-
-```
-python pi_webapi_monitor.py
+```bash
+python main.py
 ```
 
-Replace the filename with your actual script filename.
+This will launch a GUI window.
 
 ---
 
-## 🖥 How to Use
+## 🖱️ How to Use
 
-1. Launch the application.
-2. Select a tag from the table.
-3. Set threshold values (`Min`, `Max`) and messages.
-4. Click **"Apply Settings"**.
-5. Alerts will blink red if thresholds are violated and send syslog messages.
-6. Use **"Export Settings"** to save configurations.
-7. Use **"Import Settings"** to load previous configurations.
-8. Toggle between light/dark themes with **"Toggle Theme"**.
+1. Monitor PI tags in the main table view.
+2. Click on a tag to configure:
+
+   * Minimum and maximum thresholds
+   * Custom messages for alerts
+   * Priority level (Critical, High, Medium, Low)
+3. Click `Apply Settings` to save per-tag preferences.
+4. If a tag breaches its limits:
+
+   * It blinks red in the table.
+   * A JSON-formatted syslog message is sent.
+5. Use `Export`/`Import` to save and reuse settings.
+6. Toggle between light and dark mode anytime.
 
 ---
 
-## 📤 Syslog Format Example
+## 📨 Sample Syslog Format
 
-Messages sent over UDP to the syslog server in JSON format:
+Syslog messages are sent over **UDP** in JSON format:
 
 ```json
 {
-  "Tag": "TemperatureSensor01",
-  "Value": 110.5,
-  "Timestamp": "2025-06-13 15:30:45",
+  "Tag": "Pump1_Speed",
+  "Value": 120.0,
+  "Timestamp": "2025-06-13 14:30:00",
   "Severity": "Critical",
   "Condition": "Above Max",
   "Threshold": 100,
-  "Message": "Temperature too high!",
+  "Message": "Pump speed too high!",
   "Priority": "High"
 }
 ```
 
----
-
-## 📁 Import / Export Settings
-
-* **Export** saves tag threshold configs to a `.json` file.
-* **Import** restores settings for all tags from a `.json`.
+Make sure your syslog listener is set up to receive JSON over UDP on the specified port.
 
 ---
 
-## 🌙 Theme Support
+## 💾 Settings Import/Export
 
-* Toggle between light and dark themes
-* Animated transition between colors
-* Auto blinking of alert rows in red
+Use the `Export Settings` and `Import Settings` buttons to save/load tag configurations in `.json` format — useful for backing up or sharing threshold setups.
 
 ---
 
-## 📌 Notes
+## 🌓 Theme Support
 
-* Tags with GUID-style names are ignored
-* The app fetches values every 10 seconds in the background
-* Works with PI Web API supporting NTLM authentication
-* Keep your credentials safe (do not commit to public repos)
+Click `Toggle Theme` to switch between **light** and **dark** modes, with smooth color transitions and GUI adaptation.
 
 ---
 
-## 📜 License
+## 📋 Roadmap & Ideas
 
-MIT License – free to use, modify, and distribute.
+* [ ] Multi-user support
+* [ ] Encrypted credential storage
+* [ ] Email notifications
+* [ ] Scheduled reports
+* [ ] Better syslog customization
+
+Want to contribute? Submit a pull request or open an issue!
 
 ---
 
-## 🙋 Support & Contributions
+## 📄 License
 
-Feel free to open an issue or a pull request with improvements or fixes.
+This project is licensed under the **MIT License**.
 
 ---
 
-Let me know if you'd like:
+## 🙌 Credits
 
-* A sample `.json` settings file
-* `.gitignore` or `requirements.txt` auto-generated
-* Screenshot or GIF embed
-* Packaging instructions (e.g., PyInstaller for `.exe`)
+Developed and maintained by [PJ-Hackers](https://github.com/PJ-Hackers).
+Special thanks to the open-source community and OSIsoft’s PI Web API.
+
