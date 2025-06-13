@@ -145,6 +145,7 @@ Want to contribute? Submit a pull request or open an issue!
 
 ![Screenshot 2025-06-13 161944](https://github.com/user-attachments/assets/bf39c964-69eb-46e1-89ea-35dd65dbd56d)
 
+- Syslog in ELK
 ![image](https://github.com/user-attachments/assets/b940a288-2e3c-4c44-8143-42ed1c2886c2)
 
 
