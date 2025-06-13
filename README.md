@@ -6,15 +6,29 @@ A modern Python GUI application to monitor **PI System tags** in real time using
 
 ---
 
+
 ## 🚀 Features
 
-✨ **Real-Time Monitoring**
-🔔 **Custom Alerts with Syslog Integration**
-🌗 **Animated Dark/Light Theme Toggle**
-⚙️ **Per-Tag Min/Max Settings**
-📝 **Export/Import Tag Configurations (JSON)**
-🧠 **Built-in Logging System (viewable in GUI)**
-🧪 **Blinking Alerts for Out-of-Range Values**
+* ✨ **Real-Time Monitoring**
+  Continuously fetches and displays live data from PI Web API tags.
+
+* 🔔 **Custom Alerts with Syslog Integration**
+  Sends alerts to a syslog server when tag values cross thresholds.
+
+* 🌗 **Animated Dark/Light Theme Toggle**
+  Switch themes on-the-fly with smooth transitions.
+
+* ⚙️ **Per-Tag Min/Max Settings**
+  Configure thresholds, messages, and priority individually for each tag.
+
+* 📝 **Export/Import Tag Configurations (JSON)**
+  Save or load settings to and from `.json` files.
+
+* 🧠 **Built-in Logging System (viewable in GUI)**
+  View recent events, errors, and status updates directly in the app.
+
+* 🧪 **Blinking Alerts for Out-of-Range Values**
+  Visually highlight rows that exceed defined limits with blinking red alerts.
 
 ---
 
