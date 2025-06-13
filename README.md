@@ -143,7 +143,8 @@ Want to contribute? Submit a pull request or open an issue!
 ---
 ## 🖼️ Preview
 
-![image](https://github.com/user-attachments/assets/a581f3e2-e5f1-462e-8c8b-69177b923681)
+![Screenshot 2025-06-13 161944](https://github.com/user-attachments/assets/bf39c964-69eb-46e1-89ea-35dd65dbd56d)
+
 
 
 ---
