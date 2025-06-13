@@ -156,7 +156,7 @@ This software is licensed for **personal and internal use only** under a custom 
 - ✅ You may modify and use it privately or within your organization
 - ⚠️ All rights are reserved by the author
 
-For commercial licensing or permission to redistribute, please contact: pjhackers.dev [at] example.com
+For commercial licensing or permission to redistribute, please contact: pranavdave51@gmail.com
 
 
 ---
